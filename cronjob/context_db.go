@@ -10,8 +10,6 @@ import (
 	"github.com/go-xorm/xorm"
 )
 
- echomiddleware.ContextDBName
-
 func ContextDB(service string, xormEngine *xorm.Engine, kafkaConfig kafka.Config) Middleware {
 	ctxdb := ctxdb.New(xormEngine, service, kafkaConfig)
 
