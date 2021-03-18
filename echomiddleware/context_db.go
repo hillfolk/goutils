@@ -14,6 +14,7 @@ import (
 type ContextDBType string
 
 var ContextDBName ContextDBType = "DB"
+var ContextMYNUMBERDBName ContextDBType = "MY_NUMBER_DB"
 
 func ContextDB(service string, xormEngine *xorm.Engine, kafkaConfig kafka.Config) echo.MiddlewareFunc {
 	return ContextDBWithName(service, ContextDBName, xormEngine, kafkaConfig)
